@@ -1,0 +1,96 @@
+import { Product } from "@/types/product";
+
+export const kupaProducts: Product[] = [
+  {
+    id: 301,
+    category: "kupa",
+    title: "Fatih Terim Kupa",
+    image: "/images/products/kupa1.jpeg",
+    price: 299,
+  },
+
+  {
+    id: 302,
+    category: "kupa",
+    title: "Aykut Kocaman Kupa",
+    image: "/images/products/kupa2.jpeg",
+    price: 299,
+  },
+  {
+    id: 303,
+    category: "kupa",
+    title: "Fatih Terim Kupa",
+    image: "/images/products/kupa3.jpeg",
+    price: 299,
+  },
+  {
+    id: 304,
+    category: "kupa",
+    title: "Şenol Güneş Kupa",
+    image: "/images/products/kupa4.jpeg",
+    price: 299,
+  },
+  {
+    id: 305,
+    category: "kupa",
+    title: "Fatih Terim Kupa",
+    image: "/images/products/kupa5.jpeg",
+    price: 299,
+  },
+  {
+    id: 306,
+    category: "kupa",
+    title: "Fatih Terim Kupa",
+    image: "/images/products/kupa6.jpeg",
+    price: 299,
+  },
+  {
+    id: 307,
+    category: "kupa",
+    title: "Aykut Kocaman Kupa",
+    image: "/images/products/kupa7.jpeg",
+    price: 299,
+  },
+  {
+    id: 308,
+    category: "kupa",
+    title: "Fatih Terim Kupa",
+    image: "/images/products/kupa8.jpeg",
+    price: 299,
+  },
+  {
+    id: 309,
+    category: "kupa",
+    title: "Fatih Terim Kupa",
+    image: "/images/products/kupa9.jpeg",
+    price: 299,
+  },
+  {
+    id: 310,
+    category: "kupa",
+    title: "Osman Zeki Korkmaz Kupa",
+    image: "/images/products/kupa10.jpeg",
+    price: 299,
+  },
+  {
+    id: 311,
+    category: "kupa",
+    title: "Şenol Güneş Kupa",
+    image: "/images/products/kupa11.jpeg",
+    price: 299,
+  },
+  {
+    id: 312,
+    category: "kupa",
+    title: "Fatih Terim Kupa",
+    image: "/images/products/kupa12.jpeg",
+    price: 299,
+  },
+  {
+    id: 313,
+    category: "kupa",
+    title: "Sergen Yalçın Kupa",
+    image: "/images/products/kupa13.jpeg",
+    price: 299,
+  },
+];
