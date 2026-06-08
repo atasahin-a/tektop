@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import PageHeader from "@/components/layout/header";
 import Image from "next/image";
+import { Eye, EyeOff } from "lucide-react";
 
 export default function RegisterPage() {
   const router = useRouter();
@@ -22,6 +23,14 @@ export default function RegisterPage() {
 
   const [confirmPassword, setConfirmPassword] =
     useState("");
+
+    const [showPassword, setShowPassword] =
+  useState(false);
+
+const [
+  showConfirmPassword,
+  setShowConfirmPassword,
+] = useState(false);
 
   const handleRegister = () => {
     if (
@@ -89,25 +98,73 @@ export default function RegisterPage() {
             className="w-full border-b bg-transparent pb-2 outline-none"
           />
 
-          <input
-            type="password"
-            placeholder="Şifre"
-            value={password}
-            onChange={(e) =>
-              setPassword(e.target.value)
-            }
-            className="w-full border-b bg-transparent pb-2 outline-none"
-          />
+          <div className="flex items-center border-b pb-2">
 
-          <input
-            type="password"
-            placeholder="Şifre Tekrar"
-            value={confirmPassword}
-            onChange={(e) =>
-              setConfirmPassword(e.target.value)
-            }
-            className="w-full border-b bg-transparent pb-2 outline-none"
-          />
+  <input
+    type={
+      showPassword
+        ? "text"
+        : "password"
+    }
+    placeholder="Şifre"
+    value={password}
+    onChange={(e) =>
+      setPassword(e.target.value)
+    }
+    className="w-full bg-transparent outline-none"
+  />
+
+  <button
+    type="button"
+    onClick={() =>
+      setShowPassword(
+        !showPassword
+      )
+    }
+  >
+    {showPassword ? (
+      <EyeOff size={18} />
+    ) : (
+      <Eye size={18} />
+    )}
+  </button>
+
+</div>
+
+          <div className="flex items-center border-b pb-2">
+
+  <input
+    type={
+      showConfirmPassword
+        ? "text"
+        : "password"
+    }
+    placeholder="Şifre Tekrar"
+    value={confirmPassword}
+    onChange={(e) =>
+      setConfirmPassword(
+        e.target.value
+      )
+    }
+    className="w-full bg-transparent outline-none"
+  />
+
+  <button
+    type="button"
+    onClick={() =>
+      setShowConfirmPassword(
+        !showConfirmPassword
+      )
+    }
+  >
+    {showConfirmPassword ? (
+      <EyeOff size={18} />
+    ) : (
+      <Eye size={18} />
+    )}
+  </button>
+
+</div>
 
           <button
             onClick={handleRegister}

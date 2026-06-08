@@ -4,12 +4,15 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import PageHeader from "@/components/layout/header";
 import Image from "next/image";
+import { Eye, EyeOff } from "lucide-react";
 
 export default function LoginPage() {
   const router = useRouter();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] =
+  useState(false);
 
   const handleLogin = () => {
     const user = JSON.parse(
@@ -48,15 +51,38 @@ export default function LoginPage() {
             className="w-full border-b bg-transparent pb-2 outline-none"
           />
 
-          <input
-            type="password"
-            placeholder="Şifre"
-            value={password}
-            onChange={(e) =>
-              setPassword(e.target.value)
-            }
-            className="w-full border-b bg-transparent pb-2 outline-none"
-          />
+          <div className="flex items-center border-b pb-2">
+
+  <input
+    type={
+      showPassword
+        ? "text"
+        : "password"
+    }
+    placeholder="Şifre"
+    value={password}
+    onChange={(e) =>
+      setPassword(e.target.value)
+    }
+    className="w-full bg-transparent outline-none"
+  />
+
+  <button
+    type="button"
+    onClick={() =>
+      setShowPassword(
+        !showPassword
+      )
+    }
+  >
+    {showPassword ? (
+      <EyeOff size={18} />
+    ) : (
+      <Eye size={18} />
+    )}
+  </button>
+
+</div>
           <div className="flex items-center justify-between text-[14px]">
 
   <label className="flex items-center gap-2 cursor-pointer">
