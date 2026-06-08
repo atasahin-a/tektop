@@ -111,13 +111,24 @@ export default function Footer() {
               strokeWidth={2.5}
             />
 
-            <div className="flex h-[72px] w-[72px] items-center justify-center rounded-full border-2 border-[#006C2F] text-[30px]">
-              IG
-            </div>
+           <Link
+  href="https://www.instagram.com/tektopresmi/"
+  target="_blank"
+  className="flex items-center gap-8"
+>
 
-            <span className="text-[34px] font-bold">
-              @tektopresmi
-            </span>
+  <Image
+    src="/logo/instagram.jpg"
+    alt="Instagram"
+    width={72}
+    height={72}
+  />
+
+  <span className="text-[34px] font-bold text-[#006C2F]">
+    @tektopresmi
+  </span>
+
+</Link>
 
           </div>
 
