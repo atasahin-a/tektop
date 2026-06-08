@@ -118,7 +118,7 @@ export default function Footer() {
 >
 
   <Image
-    src="/logo/insta1.png"
+    src="/logo/insta2.jpeg"
     alt="Instagram"
     width={72}
     height={72}
